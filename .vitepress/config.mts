@@ -25,8 +25,7 @@ export default defineConfig({
         content: "OXC: The JavaScript Oxidation Compiler",
       },
     ],
-
-    // og
+    // Open Graph
     [
       "meta",
       {
@@ -43,13 +42,7 @@ export default defineConfig({
       },
     ],
     ["meta", { property: "og:site_name", content: "OXC" }],
-    [
-      "meta",
-      {
-        property: "og:url",
-        content: "https://github.com/oxc-project",
-      },
-    ],
+    ["meta", { property: "og:url", content: "https://github.com/oxc-project" }],
     [
       "meta",
       {
@@ -92,7 +85,6 @@ export default defineConfig({
       },
     ],
   ],
-
   lastUpdated: true,
   themeConfig: {
     siteTitle: "OXC",
@@ -102,9 +94,9 @@ export default defineConfig({
       provider: "local",
     },
     nav: [
-      { text: "Getting Started", link: "/docs/guide/introduction" },
-      { text: "Contribute", link: "/docs/contribute/intro" },
-      { text: "Learn", link: "/docs/learn/ecosystem" },
+      { text: "Guide", link: "/docs/guide/introduction" },
+      { text: "Learn", link: "/docs/learn/architecture/introduction" },
+      { text: "Contribute", link: "/docs/contribute/introduction" },
       { text: "Blog", link: "/blog/2022-02-10-js-tooling-research" },
       {
         text: "Playground",
@@ -146,33 +138,14 @@ export default defineConfig({
           ],
         },
       ],
-      "/docs/contribute/": [
-        { text: "Intro", link: "/docs/contribute/intro" },
-        { text: "Rules", link: "/docs/contribute/rules" },
-        {
-          items: [
-            { text: "Parser", link: "/docs/contribute/parser" },
-            { text: "Linter", link: "/docs/contribute/linter" },
-            { text: "Prettier", link: "/docs/contribute/prettier" },
-            { text: "Resolver", link: "/docs/contribute/resolver" },
-            {
-              text: "Transformer",
-              link: "/docs/contribute/transformer",
-            },
-            { text: "Formatter", link: "/docs/contribute/formatter" },
-            { text: "Codegen", link: "/docs/contribute/codegen" },
-            { text: "Minifier", link: "/docs/contribute/minifier" },
-            { text: "VSCode", link: "/docs/contribute/vscode" },
-          ],
-        },
-        { text: "Performance", link: "/docs/contribute/performance" },
-        { text: "Showcase", link: "/docs/contribute/showcase" },
-      ],
       "/docs/learn/": [
         {
           text: "Architecture",
           items: [
-            { text: "Intro", link: "/docs/learn/architecture/intro" },
+            {
+              text: "Introduction",
+              link: "/docs/learn/architecture/introduction",
+            },
             {
               text: "Parser",
               link: "/docs/learn/architecture/parser",
@@ -212,6 +185,34 @@ export default defineConfig({
         { text: "Performance", link: "/docs/learn/performance" },
         { text: "Ecosystem", link: "/docs/learn/ecosystem" },
         { text: "References", link: "/docs/learn/references" },
+      ],
+      "/docs/contribute/": [
+        {
+          text: "Contributing Guide",
+          items: [
+            { text: "Introduction", link: "/docs/contribute/introduction" },
+            { text: "Development", link: "/docs/contribute/development" },
+          ],
+        },
+        {
+          text: "Domain",
+          items: [
+            { text: "Parser", link: "/docs/contribute/parser" },
+            { text: "Linter", link: "/docs/contribute/linter" },
+            { text: "Prettier", link: "/docs/contribute/prettier" },
+            { text: "Resolver", link: "/docs/contribute/resolver" },
+            {
+              text: "Transformer",
+              link: "/docs/contribute/transformer",
+            },
+            { text: "Formatter", link: "/docs/contribute/formatter" },
+            { text: "Codegen", link: "/docs/contribute/codegen" },
+            { text: "Minifier", link: "/docs/contribute/minifier" },
+            { text: "VSCode", link: "/docs/contribute/vscode" },
+          ],
+        },
+        { text: "Performance", link: "/docs/contribute/performance" },
+        { text: "Showcase", link: "/docs/contribute/showcase" },
       ],
       "/blog/": blogSidebar,
     },
