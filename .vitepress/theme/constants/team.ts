@@ -1,31 +1,10 @@
+import type { DefaultTheme } from "vitepress";
+
 export type TeamMember = CoreTeamMember | CommunityTeamMember;
 
-interface TeamMemberBase /* extends VitePress' `TeamMember` type, which is not exporeted */ {
+interface TeamMemberBase extends DefaultTheme.TeamMember {
   id: string;
   type: "core" | "community";
-  avatar: string;
-  name: string;
-  title?: string;
-  org?: string;
-  orgLink?: string;
-  desc?: string;
-  links?: {
-    icon:
-      | "discord"
-      | "facebook"
-      | "github"
-      | "instagram"
-      | "linkedin"
-      | "mastodon"
-      | "slack"
-      | "twitter"
-      | "x"
-      | "youtube"
-      | { svg: string };
-    link: string;
-    ariaLabel?: string;
-  }[];
-  sponsor?: string;
 }
 
 export interface CoreTeamMember extends TeamMemberBase {
@@ -58,6 +37,14 @@ export const TEAM_MEMBERS: TeamMember[] = [
       { icon: "github", link: "https://github.com/mysteryven" },
       { icon: "twitter", link: "https://twitter.com/mysteryven" },
     ],
+  },
+  {
+    id: "cameron",
+    type: "core",
+    name: "Cameron",
+    title: "Member",
+    avatar: "https://www.github.com/camc314.png",
+    links: [{ icon: "github", link: "https://github.com/camc314" }],
   },
 ];
 
